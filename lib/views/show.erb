@@ -1,0 +1,85 @@
+<html>
+	<head>
+	<style>
+body {
+    background-color: rgb(21, 32, 43);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: white;
+    
+    text-align: center;
+    margin-top: 1em;
+    font-size: 40px;
+}
+
+a {
+	color: #95a5a6;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #bdc3c7;
+}
+
+.edit {
+	color: white;
+    text-decoration: none;
+    margin-left: 22em;
+    font-size: 30px;
+}
+
+.edit:hover {
+	border: 0px solid rgba(255, 0, 0, .5);
+	background-color: #6a89cc;
+	border-radius: 5px;
+	padding: 5px;
+	color: white;
+    text-decoration: none;
+    margin-left: 22em;
+    font-size: 30px;
+}
+
+.home {
+	color: white;
+    text-decoration: none;
+    margin-left: 19.5em;
+    font-size: 30px;
+}
+
+.home:hover {
+	border: 0px solid rgba(255, 0, 0, .5);
+	background-color: #6a89cc;
+	border-radius: 5px;
+	padding: 5px;
+	color: white;
+    text-decoration: none;
+    margin-left: 19.5em;
+    font-size: 30px;
+}
+
+p {
+	border: 1px solid;
+	background-color: #0a3d62;
+	padding: 7px;
+	text-align:center;
+	color: white;
+	font-size: 40px;
+}
+	</style>
+		<title>page potin</title>
+	</head>
+	<body>
+		<h1>PAGE POTIN !</h1>
+		<a href="/gossips/<%= id%>/edit" class="edit">Éditer ce potin</a>
+		<% gossips.each do |gossip| %>
+			<p> Voici la page du potin n° <%= id%><br/>
+			Son auteur : <%= gossip.author %><br/>
+			Le contenu du potin :<br/>
+			<%= gossip.content %>
+			</p>
+		<% end %>
+	</body>
+	<a href="/" class="home">Retour à la page d'accueil</a>
+</html>

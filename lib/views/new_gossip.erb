@@ -1,0 +1,83 @@
+<html>
+	<head>
+		<style>
+body {
+    background-color: rgb(21, 32, 43);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-top: 1em;
+	font-size: 40px;
+}
+
+.demititle {
+	color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 30px;
+}
+
+input[type=text] {
+	background-color: rgb(21, 32, 43);
+	border: 1px solid #bdc3c7;
+	border-radius: 4px;
+	display: inline-block;
+	color: white;
+}
+
+.username {
+	width: 30%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	margin-left: 40em;
+	box-sizing: border-box;
+}
+
+.gossip {
+	width: 50%;
+	height: 50%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	margin-left: 28em;
+}
+
+input[type=submit] {
+	width: 50%;
+	margin-left: 28em;
+	background-color: #34495e;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	float: middle;
+}
+
+input[type=submit]:hover {
+	width: 50%;
+	margin-left: 28em;
+	background-color: #6a89cc;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	float: middle;
+}
+		</style>
+		<title>Créer un potin</title>
+	</head>
+	<body>
+		<h1>Crée un potin !</h1>
+		<p class="demititle">Fais nous rêver</p>
+		<form action='/gossips/new/' method='POST'>
+			<input type='text' name='gossip_author' placeholder="Username.." class="username"/><br/>
+			<input type='text' name='gossip_content' placeholder="Gossip.." class="gossip"/><br/>
+			<input type='submit'/>
+		</form>
+	</body>
+</html>
